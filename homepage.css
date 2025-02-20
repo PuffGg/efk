@@ -603,12 +603,6 @@ footer p {
     z-index: 1000;
   }
 
-  .nav-logo {
-    position: fixed;
-    top: 0;
-    left: 0;
-  
-  }
 
   /* Logo Styling */
   .logo {

@@ -43,7 +43,7 @@
 #google_translate_element select {
   padding: 5px; /* Add padding to the select box */
   border-radius: 3px; /* Rounded edges for the select box */
-  border: 1px solid #ccc; /* Border for the select box */
+  border: 1px solid #064704; /* Border for the select box */
   font-size: 10px; /* Match font size with the container */
   cursor: pointer; /* Indicate it’s clickable */
 }
