@@ -48,6 +48,19 @@ const teamMembers = [
     },
   },
 
+{
+  name: "Nicodemus",
+  position: "Farm Manager",
+  description:
+    "",
+  image: "nico.jpeg",
+  altText: "Nicodemus",
+  social: {
+    linkedin: "#",
+    instagram: "",
+  },
+},
+
   {
     name: "Maurine Agong",
     position: "Secretary",
