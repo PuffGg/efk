@@ -38,3 +38,49 @@
     
     // Auto-movement has been removed
 });
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.getElementById('testimonials-slider');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    
+    // Get all testimonial elements
+    const testimonials = slider.querySelectorAll('.testimonial');
+    let currentIndex = 0;
+    
+    // Hide all testimonials except the first one
+    for (let i = 1; i < testimonials.length; i++) {
+        testimonials[i].style.display = 'none';
+    }
+    
+    // Function to show a specific testimonial
+    function showTestimonial(index) {
+        // Hide all testimonials
+        testimonials.forEach(testimonial => {
+            testimonial.style.display = 'none';
+        });
+        
+        // Show the testimonial at the specified index
+        testimonials[index].style.display = 'block';
+    }
+    
+    // Previous button click event
+    prevBtn.addEventListener('click', function() {
+        currentIndex--;
+        if (currentIndex < 0) {
+            currentIndex = testimonials.length - 1;
+        }
+        showTestimonial(currentIndex);
+    });
+    
+    // Next button click event
+    nextBtn.addEventListener('click', function() {
+        currentIndex++;
+        if (currentIndex >= testimonials.length) {
+            currentIndex = 0;
+        }
+        showTestimonial(currentIndex);
+    });
+});
