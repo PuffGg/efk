@@ -1,0 +1,306 @@
+  /* Reset and base styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+
+
+/* Main content styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color:  #2f5c40;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 3px;
+    background-color:  #2f5c40;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+
+
+/* About section slider styles */
+.about-image-slider1 {
+flex: 1;
+min-width: 300px;
+height: 400px;
+overflow: hidden;
+position: relative;
+}
+
+.slider-container1 {
+height: 100%;
+width: 100%;
+position: relative;
+}
+
+.slider-track1 {
+display: flex;
+width: 400%;  /* 100% * number of slides */
+height: 100%;
+transition: transform 0.5s ease-in-out;
+}
+
+.slide1 {
+width: 25%;  /* 100% / number of slides */
+height: 100%;
+}
+
+.slide1 img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.slider-controls1 {
+position: absolute;
+bottom: 20px;
+left: 0;
+right: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
+}
+
+.slider-btn1 {
+background-color:  #2f5c40;
+color: white;
+border: none;
+border-radius: 50%;
+width: 36px;
+height: 36px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 1rem;
+}
+
+.slider-btn1:hover {
+background-color:  #2f5c40;
+}
+
+.slider-indicators1 {
+display: flex;
+gap: 8px;
+}
+
+.indicator {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: rgba(255, 255, 255, 0.5);
+cursor: pointer;
+}
+
+.indicator.active {
+background-color: white;
+}
+/* About section */
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.about-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+    height: 400px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Impact section */
+.impact-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.stat-box {
+    flex: 1;
+    min-width: 200px;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color:  #2f5c40;
+    margin-bottom: 0.5rem;
+}
+
+/* Testimonials section */
+.testimonials-container {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.testimonials {
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.testimonial {
+    min-width: 100%;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    transition: opacity 0.5s ease;
+}
+
+.testimonial-text {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    align-self: flex-end;
+}
+
+.testimonial-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    gap: 1rem;
+}
+
+.control-btn {
+    background-color:  #2f5c40;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.control-btn:hover {
+    background-color: #1a237e;
+}
+
+/* Join section */
+.join-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.form-group {
+    flex: 1;
+    min-width: 300px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color:  #2f5c40;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #1a237e;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+    
+    h2 {
+        font-size: 1.7rem;
+    }
+    
+    .about {
+        flex-direction: column;
+    }
+    
+    .about-image {
+        height: 300px;
+    }
+}
